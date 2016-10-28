@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="musicPlayer1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="miniVolume.png" maximumValueImage="maxVolume.png" translatesAutoresizingMaskIntoConstraints="NO" id="a9f-G6-ZO9">
+                                <color key="minimumTrackTintColor" red="0.42524636410372463" green="0.40427576117471797" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="action_slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="bub-zM-vxu"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35o-0Q-vbd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="3MF-3D-QGC"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ajg-JR-XTN"/>
+                                </constraints>
+                                <state key="normal" image="play.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="action_play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IbE-Hc-DI1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charlie.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ine-GM-tmj"/>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="35o-0Q-vbd" firstAttribute="top" secondItem="ine-GM-tmj" secondAttribute="bottom" constant="55" id="0d7-V4-dVS"/>
+                            <constraint firstItem="a9f-G6-ZO9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="1js-ZT-ets"/>
+                            <constraint firstItem="35o-0Q-vbd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CZB-gC-Fxb"/>
+                            <constraint firstItem="a9f-G6-ZO9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HgZ-3j-2g1"/>
+                            <constraint firstItem="a9f-G6-ZO9" firstAttribute="top" secondItem="35o-0Q-vbd" secondAttribute="bottom" constant="34" id="TIp-CD-H8D"/>
+                            <constraint firstItem="ine-GM-tmj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="UXa-vf-OTi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ine-GM-tmj" secondAttribute="trailing" constant="97" id="VZi-kI-68P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a9f-G6-ZO9" secondAttribute="trailing" constant="26" id="c73-FZ-FyU"/>
+                            <constraint firstItem="ine-GM-tmj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="iyn-iP-W3D"/>
+                            <constraint firstItem="a9f-G6-ZO9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jJL-oK-3ZF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn_play" destination="35o-0Q-vbd" id="m0M-y7-kWe"/>
+                        <outlet property="sld_vol" destination="a9f-G6-ZO9" id="o0d-Xs-DaE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="charlie.jpg" width="600" height="600"/>
+        <image name="maxVolume.png" width="30" height="30"/>
+        <image name="miniVolume.png" width="30" height="30"/>
+        <image name="play.png" width="256" height="256"/>
+    </resources>
+</document>
